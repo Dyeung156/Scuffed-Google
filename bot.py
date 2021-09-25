@@ -47,9 +47,10 @@ async def join(ctx):
 async def join(ctx):
     await ctx.voice_client.disconnect()
 
-@bot.command(name="google")
+@bot.command(name="google",aliases=["search"])
 async def join(ctx, *, search):
-    driver.get("https://google.com")
+    driver.get(f"https://google.com/search?q={search}")
+    
 
 # ---------------------------------------
 
