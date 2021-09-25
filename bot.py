@@ -50,7 +50,11 @@ async def join(ctx):
 @bot.command(name="google",aliases=["search"])
 async def join(ctx, *, search):
     driver.get(f"https://google.com/search?q={search}")
-    
+    driver.find_element_by_partial_link_text(search).click()
+    await ctx.send(driver.current_url)
+    #src = driver.page_source
+    #print(src)
+
 
 # ---------------------------------------
 
