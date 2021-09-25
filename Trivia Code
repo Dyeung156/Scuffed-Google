@@ -4,8 +4,8 @@ import random
 def getRandoRow(rows):
   selected = random.choice(rows)
   print(selected[0] + " Please answer in all caps.")
-  answer = input()
-  if answer == selected[1]:
+  
+  if input() == selected[1]:
     print("Correct. Here have a cookie.")
   else:
     print("Sorry but the correct answer is " + selected[1])
