@@ -9,7 +9,7 @@ from itertools import cycle
 load_dotenv()
 from discord.ext import commands, tasks
 
-bot = commands.Bot(command_prefix='!', description='SBU HACKS BOT!!')
+bot = commands.Bot(command_prefix='?', description='SBU HACKS BOT!!')
 TOKEN = os.environ.get('TOKEN', 3)
 
 @bot.event
@@ -23,6 +23,14 @@ async def on_ready():
 async def hello(ctx):
     await ctx.send("hey sup lol")
 
+@bot.command(name="join")
+async def join(ctx):
+    channel = ctx.author.voice.channel
+    await channel.connect()
+
+@bot.command(name="leave")
+async def join(ctx):
+    await ctx.voice_client.disconnect()
 
 @bot.command(hidden=True)
 async def load(ctx):
