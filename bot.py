@@ -53,5 +53,4 @@ async def reload(ctx):
             bot.unload_extension(f'cogs.{filename[:-3]}')
             bot.load_extension(f'cogs.{filename[:-3]}')
 
-
 bot.run(TOKEN)
