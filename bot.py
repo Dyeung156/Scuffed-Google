@@ -1,6 +1,5 @@
 # bot.py
 import os
-
 import discord, random, asyncio
 from dotenv import load_dotenv
 from discord import Member
