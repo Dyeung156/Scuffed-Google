@@ -1,5 +1,16 @@
 import csv
 import random
+import os 
+
+import discord 
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
+
+bot = discord.Client()
+
+
 
 def getRandoRow(rows):
   selected = random.choice(rows)
@@ -17,8 +28,11 @@ rows = []
 for row in csvReader:
   rows.append(row)
 
+#getRandoRow(rows)
+
 @bot.command(name='trivia')
 async def trivia(ctx):
     await ctx.send(getRandoRow)
+
 
 file.close()
