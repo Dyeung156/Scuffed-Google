@@ -1,0 +1,19 @@
+import csv
+import random
+
+def getRandoRow(rows):
+  chosen_row = random.choice(rows)
+  print(chosen_row[0])
+
+file = open("Trivia.csv")
+csvReader = csv.reader(file)
+header = next(csvReader)
+
+rows = []
+for row in csvReader:
+  rows.append(row)
+
+getRandoRow(rows)
+
+#print(rows)
+file.close()
