@@ -17,6 +17,8 @@ rows = []
 for row in csvReader:
   rows.append(row)
 
-getRandoRow(rows)
+@bot.command(name='trivia')
+async def trivia(ctx):
+    await ctx.send(getRandoRow)
 
 file.close()
