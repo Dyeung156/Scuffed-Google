@@ -2,12 +2,16 @@ import csv
 import random
 
 def getRandoRow(rows):
-  chosen_row = random.choice(rows)
-  print(chosen_row[0])
+  selected = random.choice(rows)
+  print(selected[0] + " Please answer in all caps.")
+  answer = input()
+  if answer == selected[1]:
+    print("Correct. Here have a cookie.")
+  else:
+    print("Sorry but the correct answer is " + selected[1])
 
 file = open("Trivia.csv")
 csvReader = csv.reader(file)
-header = next(csvReader)
 
 rows = []
 for row in csvReader:
@@ -15,5 +19,4 @@ for row in csvReader:
 
 getRandoRow(rows)
 
-#print(rows)
 file.close()
