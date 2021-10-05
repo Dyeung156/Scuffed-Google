@@ -1,6 +1,6 @@
 # Scuffed-Google
 
-Inspiration
+## Inspiration
 
 We were inspired to develop a new discord meme bot to meet our needs as Stony Brook students, with functionality designed to entertain and keep us sharp.
 
